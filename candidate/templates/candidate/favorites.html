@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+
+
+<div class="container">
+
+
+    <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">Avatar</th>
+            <th scope="col">Username</th>
+            <th scope="col">Profile URL</th>
+            <th scope="col">Email</th>
+          </tr>
+        </thead>
+        {% for candidate in candidates %}
+        <tbody>
+          <tr>
+              
+            <th scope="row"><img src="{{candidate.avatar_url}}" alt="" width="50" height="50"></th>
+            <td>{{candidate.username}}</td>
+            <td><a href="{{candidate.profile_url}}">{{candidate.profile_url}}</a></td>
+            <td>{{candidate.email}}</td>
+          
+          </tr>
+     
+        </tbody>
+        {% endfor %}
+      </table>
+
+
+
+    </div>
+{% endblock content %}
+
+
+
+
+
+
+

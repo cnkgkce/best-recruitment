@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div class="container">
+
+    <div class="card" style="width: 20rem;">
+        <img src="{{candidate.avatar_url}}" class="card-img-top" alt="...">
+        <div class="card-body">
+        <h5 class="card-title">{{candidate.username}}</h5>
+        
+    </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item" style="text-align:center"><a href="{{candidate.profile_url}}">Profile URL</a></li>
+            <li class="list-group-item">Email : {{candidate.email}}</li>
+            <li class="list-group-item">Followers : {{candidate.followers}}</li>
+            <li class="list-group-item">Following : {{candidate.following}}</li>
+            <li class="list-group-item">Repos : {{candidate.repos}}</li>
+
+        </ul>
+
+    <div class="card-body">
+      <a href="mailto:{{candidate.email}}" class="card-link">Email</a>
+    </div>
+
+    </div>
+    <br>
+    <div class="container">
+        <a href="add-favourite/{{candidate.username}}"><button class="btn btn-primary">Favorilere Ekle</button></a>
+
+    </div>
+
+</div>
+
+
+{% endblock content %}
+
+
+
